@@ -18,4 +18,83 @@
      lstm.py          ctc算法处理数据
  
   3.效果
+  验证码效果
   
+ 在实际中识别中的表现：
+158
+Predicted number: 2479  实际值： 2479
+159
+Predicted number: 2897  实际值： 2897
+160
+Predicted number: 4677  实际值： 4677
+161
+Predicted number: 9153  实际值： 9153
+161
+Predicted number: TZUX  实际值： l7UX
+161
+Predicted number: uUu7  实际值： ulu7
+161
+Predicted number: P3Gh  实际值： PV0h
+162
+Predicted number: 3439  实际值： 3439
+162
+Predicted number: s639  实际值： 5439
+162
+Predicted number: 70Ut  实际值： 7oUt
+163
+Predicted number: 1819  实际值： 1819
+163
+Predicted number: 3665  实际值： 3065
+163
+Predicted number: BCaW  实际值： BGaW
+164
+Predicted number: 3686  实际值： 3686
+164
+Predicted number: b8M7  实际值： H8H7
+165
+Predicted number: 0666  实际值： 0666
+166
+Predicted number: cHJs  实际值： cHJs
+167
+Predicted number: 7390  实际值： 7390
+168
+Predicted number: 8956  实际值： 8956
+168
+Predicted number: 928m  实际值： 9kfm
+169
+Predicted number: 4165  实际值： 4165
+169
+Predicted number: 920  实际值： 3920
+169
+Predicted number: Gb0C  实际值： GM0G
+170
+Predicted number: 1816  实际值： 1816
+170
+Predicted number: i1Dq  实际值： dlBq
+170
+Predicted number: tWoZ  实际值： tVoZ
+170
+Predicted number: vASn  实际值： wWSn
+170
+Predicted number: Jcm  实际值： PTcn
+171
+Predicted number: 1526  实际值： 1526
+171
+Predicted number: caiJ  实际值： acjL
+172
+Predicted number: 5421  实际值： 5421
+172
+Predicted number: VhKe  实际值： VHKe
+173
+Predicted number: 8573  实际值： 8573
+173
+Predicted number: 0268  实际值： 0266
+174
+Predicted number: b0yL  实际值： b0yL
+175
+Predicted number: 0y0w  实际值： 0y0w
+176
+Predicted number: 4259  实际值： 4259
+177
+Predicted number: PTgd  实际值： PTgd
+
