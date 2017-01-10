@@ -18,7 +18,8 @@
      lstm.py          ctc算法处理数据     
             
   3.效果    
-  验证码效果    
+  验证码效果  
+
   
  4.在实际中识别中的表现：   
 158  
@@ -32,8 +33,8 @@ Predicted number: 9153  实际值： 9153
 161    
 Predicted number: TZUX  实际值： l7UX    
 161    
-Predicted number: uUu7  实际值： ulu7
-161
+Predicted number: uUu7  实际值： ulu7     
+161    
 Predicted number: P3Gh  实际值： PV0h    
 162     
 Predicted number: 3439  实际值： 3439    
