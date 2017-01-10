@@ -1,0 +1,5367 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "slicechannel0", 
+      "attr": {
+        "num_outputs": "30", 
+        "squeeze_axis": "1"
+      }, 
+      "inputs": [[0, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "l0_i2h_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "l0_i2h_bias", 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t0_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 0, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "l0_init_h", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "l0_h2h_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "l0_h2h_bias", 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t0_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[5, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus0", 
+      "inputs": [[4, 0, 0], [8, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t0_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[9, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation3", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[10, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation2", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[10, 2, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "l0_init_c", 
+      "inputs": []
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul0", 
+      "inputs": [[12, 0, 0], [13, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation0", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[10, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation1", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[10, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul1", 
+      "inputs": [[15, 0, 0], [16, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus1", 
+      "inputs": [[14, 0, 0], [17, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation4", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[18, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul2", 
+      "inputs": [[11, 0, 0], [19, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "l1_i2h_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "l1_i2h_bias", 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t0_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[20, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "l1_init_h", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "l1_h2h_weight", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "l1_h2h_bias", 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t0_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[24, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus2", 
+      "inputs": [[23, 0, 0], [27, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t0_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[28, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation8", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[29, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation7", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[29, 2, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "l1_init_c", 
+      "inputs": []
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul3", 
+      "inputs": [[31, 0, 0], [32, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation5", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[29, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation6", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[29, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul4", 
+      "inputs": [[34, 0, 0], [35, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus3", 
+      "inputs": [[33, 0, 0], [36, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation9", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[37, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul5", 
+      "inputs": [[30, 0, 0], [38, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t1_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 1, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t1_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[20, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus4", 
+      "inputs": [[40, 0, 0], [41, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t1_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[42, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation13", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[43, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation12", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[43, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul6", 
+      "inputs": [[45, 0, 0], [18, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation10", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[43, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation11", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[43, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul7", 
+      "inputs": [[47, 0, 0], [48, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus5", 
+      "inputs": [[46, 0, 0], [49, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation14", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[50, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul8", 
+      "inputs": [[44, 0, 0], [51, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t1_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[52, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t1_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[39, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus6", 
+      "inputs": [[53, 0, 0], [54, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t1_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[55, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation18", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[56, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation17", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[56, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul9", 
+      "inputs": [[58, 0, 0], [37, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation15", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[56, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation16", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[56, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul10", 
+      "inputs": [[60, 0, 0], [61, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus7", 
+      "inputs": [[59, 0, 0], [62, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation19", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[63, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul11", 
+      "inputs": [[57, 0, 0], [64, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t2_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 2, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t2_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[52, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus8", 
+      "inputs": [[66, 0, 0], [67, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t2_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[68, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation23", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[69, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation22", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[69, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul12", 
+      "inputs": [[71, 0, 0], [50, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation20", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[69, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation21", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[69, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul13", 
+      "inputs": [[73, 0, 0], [74, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus9", 
+      "inputs": [[72, 0, 0], [75, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation24", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[76, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul14", 
+      "inputs": [[70, 0, 0], [77, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t2_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[78, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t2_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[65, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus10", 
+      "inputs": [[79, 0, 0], [80, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t2_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[81, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation28", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[82, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation27", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[82, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul15", 
+      "inputs": [[84, 0, 0], [63, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation25", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[82, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation26", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[82, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul16", 
+      "inputs": [[86, 0, 0], [87, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus11", 
+      "inputs": [[85, 0, 0], [88, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation29", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[89, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul17", 
+      "inputs": [[83, 0, 0], [90, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t3_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 3, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t3_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[78, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus12", 
+      "inputs": [[92, 0, 0], [93, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t3_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[94, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation33", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[95, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation32", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[95, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul18", 
+      "inputs": [[97, 0, 0], [76, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation30", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[95, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation31", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[95, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul19", 
+      "inputs": [[99, 0, 0], [100, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus13", 
+      "inputs": [[98, 0, 0], [101, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation34", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[102, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul20", 
+      "inputs": [[96, 0, 0], [103, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t3_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[104, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t3_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[91, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus14", 
+      "inputs": [[105, 0, 0], [106, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t3_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[107, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation38", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[108, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation37", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[108, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul21", 
+      "inputs": [[110, 0, 0], [89, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation35", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[108, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation36", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[108, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul22", 
+      "inputs": [[112, 0, 0], [113, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus15", 
+      "inputs": [[111, 0, 0], [114, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation39", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[115, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul23", 
+      "inputs": [[109, 0, 0], [116, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t4_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 4, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t4_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[104, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus16", 
+      "inputs": [[118, 0, 0], [119, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t4_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[120, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation43", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[121, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation42", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[121, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul24", 
+      "inputs": [[123, 0, 0], [102, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation40", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[121, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation41", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[121, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul25", 
+      "inputs": [[125, 0, 0], [126, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus17", 
+      "inputs": [[124, 0, 0], [127, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation44", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[128, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul26", 
+      "inputs": [[122, 0, 0], [129, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t4_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[130, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t4_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[117, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus18", 
+      "inputs": [[131, 0, 0], [132, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t4_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[133, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation48", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[134, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation47", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[134, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul27", 
+      "inputs": [[136, 0, 0], [115, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation45", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[134, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation46", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[134, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul28", 
+      "inputs": [[138, 0, 0], [139, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus19", 
+      "inputs": [[137, 0, 0], [140, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation49", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[141, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul29", 
+      "inputs": [[135, 0, 0], [142, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t5_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 5, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t5_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[130, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus20", 
+      "inputs": [[144, 0, 0], [145, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t5_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[146, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation53", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[147, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation52", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[147, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul30", 
+      "inputs": [[149, 0, 0], [128, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation50", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[147, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation51", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[147, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul31", 
+      "inputs": [[151, 0, 0], [152, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus21", 
+      "inputs": [[150, 0, 0], [153, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation54", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[154, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul32", 
+      "inputs": [[148, 0, 0], [155, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t5_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[156, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t5_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[143, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus22", 
+      "inputs": [[157, 0, 0], [158, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t5_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[159, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation58", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[160, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation57", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[160, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul33", 
+      "inputs": [[162, 0, 0], [141, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation55", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[160, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation56", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[160, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul34", 
+      "inputs": [[164, 0, 0], [165, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus23", 
+      "inputs": [[163, 0, 0], [166, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation59", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[167, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul35", 
+      "inputs": [[161, 0, 0], [168, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t6_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 6, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t6_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[156, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus24", 
+      "inputs": [[170, 0, 0], [171, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t6_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[172, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation63", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[173, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation62", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[173, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul36", 
+      "inputs": [[175, 0, 0], [154, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation60", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[173, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation61", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[173, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul37", 
+      "inputs": [[177, 0, 0], [178, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus25", 
+      "inputs": [[176, 0, 0], [179, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation64", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[180, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul38", 
+      "inputs": [[174, 0, 0], [181, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t6_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[182, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t6_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[169, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus26", 
+      "inputs": [[183, 0, 0], [184, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t6_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[185, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation68", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[186, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation67", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[186, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul39", 
+      "inputs": [[188, 0, 0], [167, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation65", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[186, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation66", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[186, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul40", 
+      "inputs": [[190, 0, 0], [191, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus27", 
+      "inputs": [[189, 0, 0], [192, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation69", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[193, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul41", 
+      "inputs": [[187, 0, 0], [194, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t7_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 7, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t7_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[182, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus28", 
+      "inputs": [[196, 0, 0], [197, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t7_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[198, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation73", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[199, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation72", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[199, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul42", 
+      "inputs": [[201, 0, 0], [180, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation70", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[199, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation71", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[199, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul43", 
+      "inputs": [[203, 0, 0], [204, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus29", 
+      "inputs": [[202, 0, 0], [205, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation74", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[206, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul44", 
+      "inputs": [[200, 0, 0], [207, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t7_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[208, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t7_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[195, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus30", 
+      "inputs": [[209, 0, 0], [210, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t7_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[211, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation78", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[212, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation77", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[212, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul45", 
+      "inputs": [[214, 0, 0], [193, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation75", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[212, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation76", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[212, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul46", 
+      "inputs": [[216, 0, 0], [217, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus31", 
+      "inputs": [[215, 0, 0], [218, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation79", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[219, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul47", 
+      "inputs": [[213, 0, 0], [220, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t8_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 8, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t8_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[208, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus32", 
+      "inputs": [[222, 0, 0], [223, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t8_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[224, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation83", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[225, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation82", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[225, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul48", 
+      "inputs": [[227, 0, 0], [206, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation80", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[225, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation81", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[225, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul49", 
+      "inputs": [[229, 0, 0], [230, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus33", 
+      "inputs": [[228, 0, 0], [231, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation84", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[232, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul50", 
+      "inputs": [[226, 0, 0], [233, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t8_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[234, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t8_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[221, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus34", 
+      "inputs": [[235, 0, 0], [236, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t8_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[237, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation88", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[238, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation87", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[238, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul51", 
+      "inputs": [[240, 0, 0], [219, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation85", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[238, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation86", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[238, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul52", 
+      "inputs": [[242, 0, 0], [243, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus35", 
+      "inputs": [[241, 0, 0], [244, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation89", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[245, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul53", 
+      "inputs": [[239, 0, 0], [246, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t9_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 9, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t9_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[234, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus36", 
+      "inputs": [[248, 0, 0], [249, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t9_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[250, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation93", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[251, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation92", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[251, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul54", 
+      "inputs": [[253, 0, 0], [232, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation90", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[251, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation91", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[251, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul55", 
+      "inputs": [[255, 0, 0], [256, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus37", 
+      "inputs": [[254, 0, 0], [257, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation94", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[258, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul56", 
+      "inputs": [[252, 0, 0], [259, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t9_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[260, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t9_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[247, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus38", 
+      "inputs": [[261, 0, 0], [262, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t9_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[263, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation98", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[264, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation97", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[264, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul57", 
+      "inputs": [[266, 0, 0], [245, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation95", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[264, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation96", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[264, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul58", 
+      "inputs": [[268, 0, 0], [269, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus39", 
+      "inputs": [[267, 0, 0], [270, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation99", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[271, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul59", 
+      "inputs": [[265, 0, 0], [272, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t10_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 10, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t10_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[260, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus40", 
+      "inputs": [[274, 0, 0], [275, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t10_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[276, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation103", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[277, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation102", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[277, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul60", 
+      "inputs": [[279, 0, 0], [258, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation100", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[277, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation101", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[277, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul61", 
+      "inputs": [[281, 0, 0], [282, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus41", 
+      "inputs": [[280, 0, 0], [283, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation104", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[284, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul62", 
+      "inputs": [[278, 0, 0], [285, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t10_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[286, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t10_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[273, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus42", 
+      "inputs": [[287, 0, 0], [288, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t10_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[289, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation108", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[290, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation107", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[290, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul63", 
+      "inputs": [[292, 0, 0], [271, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation105", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[290, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation106", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[290, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul64", 
+      "inputs": [[294, 0, 0], [295, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus43", 
+      "inputs": [[293, 0, 0], [296, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation109", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[297, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul65", 
+      "inputs": [[291, 0, 0], [298, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t11_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 11, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t11_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[286, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus44", 
+      "inputs": [[300, 0, 0], [301, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t11_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[302, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation113", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[303, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation112", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[303, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul66", 
+      "inputs": [[305, 0, 0], [284, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation110", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[303, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation111", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[303, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul67", 
+      "inputs": [[307, 0, 0], [308, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus45", 
+      "inputs": [[306, 0, 0], [309, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation114", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[310, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul68", 
+      "inputs": [[304, 0, 0], [311, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t11_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[312, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t11_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[299, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus46", 
+      "inputs": [[313, 0, 0], [314, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t11_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[315, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation118", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[316, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation117", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[316, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul69", 
+      "inputs": [[318, 0, 0], [297, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation115", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[316, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation116", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[316, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul70", 
+      "inputs": [[320, 0, 0], [321, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus47", 
+      "inputs": [[319, 0, 0], [322, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation119", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[323, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul71", 
+      "inputs": [[317, 0, 0], [324, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t12_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 12, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t12_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[312, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus48", 
+      "inputs": [[326, 0, 0], [327, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t12_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[328, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation123", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[329, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation122", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[329, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul72", 
+      "inputs": [[331, 0, 0], [310, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation120", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[329, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation121", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[329, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul73", 
+      "inputs": [[333, 0, 0], [334, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus49", 
+      "inputs": [[332, 0, 0], [335, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation124", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[336, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul74", 
+      "inputs": [[330, 0, 0], [337, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t12_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[338, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t12_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[325, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus50", 
+      "inputs": [[339, 0, 0], [340, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t12_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[341, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation128", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[342, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation127", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[342, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul75", 
+      "inputs": [[344, 0, 0], [323, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation125", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[342, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation126", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[342, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul76", 
+      "inputs": [[346, 0, 0], [347, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus51", 
+      "inputs": [[345, 0, 0], [348, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation129", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[349, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul77", 
+      "inputs": [[343, 0, 0], [350, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t13_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 13, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t13_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[338, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus52", 
+      "inputs": [[352, 0, 0], [353, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t13_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[354, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation133", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[355, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation132", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[355, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul78", 
+      "inputs": [[357, 0, 0], [336, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation130", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[355, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation131", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[355, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul79", 
+      "inputs": [[359, 0, 0], [360, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus53", 
+      "inputs": [[358, 0, 0], [361, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation134", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[362, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul80", 
+      "inputs": [[356, 0, 0], [363, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t13_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[364, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t13_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[351, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus54", 
+      "inputs": [[365, 0, 0], [366, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t13_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[367, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation138", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[368, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation137", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[368, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul81", 
+      "inputs": [[370, 0, 0], [349, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation135", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[368, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation136", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[368, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul82", 
+      "inputs": [[372, 0, 0], [373, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus55", 
+      "inputs": [[371, 0, 0], [374, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation139", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[375, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul83", 
+      "inputs": [[369, 0, 0], [376, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t14_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 14, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t14_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[364, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus56", 
+      "inputs": [[378, 0, 0], [379, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t14_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[380, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation143", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[381, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation142", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[381, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul84", 
+      "inputs": [[383, 0, 0], [362, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation140", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[381, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation141", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[381, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul85", 
+      "inputs": [[385, 0, 0], [386, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus57", 
+      "inputs": [[384, 0, 0], [387, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation144", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[388, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul86", 
+      "inputs": [[382, 0, 0], [389, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t14_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[390, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t14_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[377, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus58", 
+      "inputs": [[391, 0, 0], [392, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t14_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[393, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation148", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[394, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation147", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[394, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul87", 
+      "inputs": [[396, 0, 0], [375, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation145", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[394, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation146", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[394, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul88", 
+      "inputs": [[398, 0, 0], [399, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus59", 
+      "inputs": [[397, 0, 0], [400, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation149", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[401, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul89", 
+      "inputs": [[395, 0, 0], [402, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t15_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 15, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t15_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[390, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus60", 
+      "inputs": [[404, 0, 0], [405, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t15_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[406, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation153", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[407, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation152", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[407, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul90", 
+      "inputs": [[409, 0, 0], [388, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation150", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[407, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation151", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[407, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul91", 
+      "inputs": [[411, 0, 0], [412, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus61", 
+      "inputs": [[410, 0, 0], [413, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation154", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[414, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul92", 
+      "inputs": [[408, 0, 0], [415, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t15_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[416, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t15_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[403, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus62", 
+      "inputs": [[417, 0, 0], [418, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t15_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[419, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation158", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[420, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation157", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[420, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul93", 
+      "inputs": [[422, 0, 0], [401, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation155", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[420, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation156", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[420, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul94", 
+      "inputs": [[424, 0, 0], [425, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus63", 
+      "inputs": [[423, 0, 0], [426, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation159", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[427, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul95", 
+      "inputs": [[421, 0, 0], [428, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t16_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 16, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t16_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[416, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus64", 
+      "inputs": [[430, 0, 0], [431, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t16_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[432, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation163", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[433, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation162", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[433, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul96", 
+      "inputs": [[435, 0, 0], [414, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation160", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[433, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation161", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[433, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul97", 
+      "inputs": [[437, 0, 0], [438, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus65", 
+      "inputs": [[436, 0, 0], [439, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation164", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[440, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul98", 
+      "inputs": [[434, 0, 0], [441, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t16_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[442, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t16_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[429, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus66", 
+      "inputs": [[443, 0, 0], [444, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t16_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[445, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation168", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[446, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation167", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[446, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul99", 
+      "inputs": [[448, 0, 0], [427, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation165", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[446, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation166", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[446, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul100", 
+      "inputs": [[450, 0, 0], [451, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus67", 
+      "inputs": [[449, 0, 0], [452, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation169", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[453, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul101", 
+      "inputs": [[447, 0, 0], [454, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t17_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 17, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t17_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[442, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus68", 
+      "inputs": [[456, 0, 0], [457, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t17_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[458, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation173", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[459, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation172", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[459, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul102", 
+      "inputs": [[461, 0, 0], [440, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation170", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[459, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation171", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[459, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul103", 
+      "inputs": [[463, 0, 0], [464, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus69", 
+      "inputs": [[462, 0, 0], [465, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation174", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[466, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul104", 
+      "inputs": [[460, 0, 0], [467, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t17_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[468, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t17_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[455, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus70", 
+      "inputs": [[469, 0, 0], [470, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t17_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[471, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation178", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[472, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation177", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[472, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul105", 
+      "inputs": [[474, 0, 0], [453, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation175", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[472, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation176", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[472, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul106", 
+      "inputs": [[476, 0, 0], [477, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus71", 
+      "inputs": [[475, 0, 0], [478, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation179", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[479, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul107", 
+      "inputs": [[473, 0, 0], [480, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t18_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 18, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t18_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[468, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus72", 
+      "inputs": [[482, 0, 0], [483, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t18_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[484, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation183", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[485, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation182", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[485, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul108", 
+      "inputs": [[487, 0, 0], [466, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation180", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[485, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation181", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[485, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul109", 
+      "inputs": [[489, 0, 0], [490, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus73", 
+      "inputs": [[488, 0, 0], [491, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation184", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[492, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul110", 
+      "inputs": [[486, 0, 0], [493, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t18_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[494, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t18_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[481, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus74", 
+      "inputs": [[495, 0, 0], [496, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t18_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[497, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation188", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[498, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation187", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[498, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul111", 
+      "inputs": [[500, 0, 0], [479, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation185", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[498, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation186", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[498, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul112", 
+      "inputs": [[502, 0, 0], [503, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus75", 
+      "inputs": [[501, 0, 0], [504, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation189", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[505, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul113", 
+      "inputs": [[499, 0, 0], [506, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t19_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 19, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t19_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[494, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus76", 
+      "inputs": [[508, 0, 0], [509, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t19_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[510, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation193", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[511, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation192", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[511, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul114", 
+      "inputs": [[513, 0, 0], [492, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation190", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[511, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation191", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[511, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul115", 
+      "inputs": [[515, 0, 0], [516, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus77", 
+      "inputs": [[514, 0, 0], [517, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation194", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[518, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul116", 
+      "inputs": [[512, 0, 0], [519, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t19_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[520, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t19_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[507, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus78", 
+      "inputs": [[521, 0, 0], [522, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t19_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[523, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation198", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[524, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation197", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[524, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul117", 
+      "inputs": [[526, 0, 0], [505, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation195", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[524, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation196", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[524, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul118", 
+      "inputs": [[528, 0, 0], [529, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus79", 
+      "inputs": [[527, 0, 0], [530, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation199", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[531, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul119", 
+      "inputs": [[525, 0, 0], [532, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t20_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 20, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t20_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[520, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus80", 
+      "inputs": [[534, 0, 0], [535, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t20_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[536, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation203", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[537, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation202", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[537, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul120", 
+      "inputs": [[539, 0, 0], [518, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation200", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[537, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation201", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[537, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul121", 
+      "inputs": [[541, 0, 0], [542, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus81", 
+      "inputs": [[540, 0, 0], [543, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation204", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[544, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul122", 
+      "inputs": [[538, 0, 0], [545, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t20_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[546, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t20_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[533, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus82", 
+      "inputs": [[547, 0, 0], [548, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t20_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[549, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation208", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[550, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation207", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[550, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul123", 
+      "inputs": [[552, 0, 0], [531, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation205", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[550, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation206", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[550, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul124", 
+      "inputs": [[554, 0, 0], [555, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus83", 
+      "inputs": [[553, 0, 0], [556, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation209", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[557, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul125", 
+      "inputs": [[551, 0, 0], [558, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t21_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 21, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t21_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[546, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus84", 
+      "inputs": [[560, 0, 0], [561, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t21_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[562, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation213", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[563, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation212", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[563, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul126", 
+      "inputs": [[565, 0, 0], [544, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation210", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[563, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation211", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[563, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul127", 
+      "inputs": [[567, 0, 0], [568, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus85", 
+      "inputs": [[566, 0, 0], [569, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation214", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[570, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul128", 
+      "inputs": [[564, 0, 0], [571, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t21_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[572, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t21_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[559, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus86", 
+      "inputs": [[573, 0, 0], [574, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t21_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[575, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation218", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[576, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation217", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[576, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul129", 
+      "inputs": [[578, 0, 0], [557, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation215", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[576, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation216", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[576, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul130", 
+      "inputs": [[580, 0, 0], [581, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus87", 
+      "inputs": [[579, 0, 0], [582, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation219", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[583, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul131", 
+      "inputs": [[577, 0, 0], [584, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t22_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 22, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t22_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[572, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus88", 
+      "inputs": [[586, 0, 0], [587, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t22_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[588, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation223", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[589, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation222", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[589, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul132", 
+      "inputs": [[591, 0, 0], [570, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation220", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[589, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation221", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[589, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul133", 
+      "inputs": [[593, 0, 0], [594, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus89", 
+      "inputs": [[592, 0, 0], [595, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation224", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[596, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul134", 
+      "inputs": [[590, 0, 0], [597, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t22_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[598, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t22_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[585, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus90", 
+      "inputs": [[599, 0, 0], [600, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t22_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[601, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation228", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[602, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation227", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[602, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul135", 
+      "inputs": [[604, 0, 0], [583, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation225", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[602, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation226", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[602, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul136", 
+      "inputs": [[606, 0, 0], [607, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus91", 
+      "inputs": [[605, 0, 0], [608, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation229", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[609, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul137", 
+      "inputs": [[603, 0, 0], [610, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t23_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 23, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t23_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[598, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus92", 
+      "inputs": [[612, 0, 0], [613, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t23_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[614, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation233", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[615, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation232", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[615, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul138", 
+      "inputs": [[617, 0, 0], [596, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation230", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[615, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation231", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[615, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul139", 
+      "inputs": [[619, 0, 0], [620, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus93", 
+      "inputs": [[618, 0, 0], [621, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation234", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[622, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul140", 
+      "inputs": [[616, 0, 0], [623, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t23_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[624, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t23_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[611, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus94", 
+      "inputs": [[625, 0, 0], [626, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t23_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[627, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation238", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[628, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation237", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[628, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul141", 
+      "inputs": [[630, 0, 0], [609, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation235", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[628, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation236", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[628, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul142", 
+      "inputs": [[632, 0, 0], [633, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus95", 
+      "inputs": [[631, 0, 0], [634, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation239", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[635, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul143", 
+      "inputs": [[629, 0, 0], [636, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t24_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 24, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t24_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[624, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus96", 
+      "inputs": [[638, 0, 0], [639, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t24_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[640, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation243", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[641, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation242", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[641, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul144", 
+      "inputs": [[643, 0, 0], [622, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation240", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[641, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation241", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[641, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul145", 
+      "inputs": [[645, 0, 0], [646, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus97", 
+      "inputs": [[644, 0, 0], [647, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation244", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[648, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul146", 
+      "inputs": [[642, 0, 0], [649, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t24_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[650, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t24_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[637, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus98", 
+      "inputs": [[651, 0, 0], [652, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t24_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[653, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation248", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[654, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation247", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[654, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul147", 
+      "inputs": [[656, 0, 0], [635, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation245", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[654, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation246", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[654, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul148", 
+      "inputs": [[658, 0, 0], [659, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus99", 
+      "inputs": [[657, 0, 0], [660, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation249", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[661, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul149", 
+      "inputs": [[655, 0, 0], [662, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t25_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 25, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t25_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[650, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus100", 
+      "inputs": [[664, 0, 0], [665, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t25_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[666, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation253", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[667, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation252", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[667, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul150", 
+      "inputs": [[669, 0, 0], [648, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation250", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[667, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation251", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[667, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul151", 
+      "inputs": [[671, 0, 0], [672, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus101", 
+      "inputs": [[670, 0, 0], [673, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation254", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[674, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul152", 
+      "inputs": [[668, 0, 0], [675, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t25_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[676, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t25_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[663, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus102", 
+      "inputs": [[677, 0, 0], [678, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t25_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[679, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation258", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[680, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation257", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[680, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul153", 
+      "inputs": [[682, 0, 0], [661, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation255", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[680, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation256", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[680, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul154", 
+      "inputs": [[684, 0, 0], [685, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus103", 
+      "inputs": [[683, 0, 0], [686, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation259", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[687, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul155", 
+      "inputs": [[681, 0, 0], [688, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t26_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 26, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t26_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[676, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus104", 
+      "inputs": [[690, 0, 0], [691, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t26_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[692, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation263", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[693, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation262", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[693, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul156", 
+      "inputs": [[695, 0, 0], [674, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation260", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[693, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation261", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[693, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul157", 
+      "inputs": [[697, 0, 0], [698, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus105", 
+      "inputs": [[696, 0, 0], [699, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation264", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[700, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul158", 
+      "inputs": [[694, 0, 0], [701, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t26_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[702, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t26_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[689, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus106", 
+      "inputs": [[703, 0, 0], [704, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t26_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[705, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation268", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[706, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation267", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[706, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul159", 
+      "inputs": [[708, 0, 0], [687, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation265", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[706, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation266", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[706, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul160", 
+      "inputs": [[710, 0, 0], [711, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus107", 
+      "inputs": [[709, 0, 0], [712, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation269", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[713, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul161", 
+      "inputs": [[707, 0, 0], [714, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t27_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 27, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t27_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[702, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus108", 
+      "inputs": [[716, 0, 0], [717, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t27_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[718, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation273", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[719, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation272", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[719, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul162", 
+      "inputs": [[721, 0, 0], [700, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation270", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[719, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation271", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[719, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul163", 
+      "inputs": [[723, 0, 0], [724, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus109", 
+      "inputs": [[722, 0, 0], [725, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation274", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[726, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul164", 
+      "inputs": [[720, 0, 0], [727, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t27_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[728, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t27_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[715, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus110", 
+      "inputs": [[729, 0, 0], [730, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t27_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[731, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation278", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[732, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation277", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[732, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul165", 
+      "inputs": [[734, 0, 0], [713, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation275", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[732, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation276", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[732, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul166", 
+      "inputs": [[736, 0, 0], [737, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus111", 
+      "inputs": [[735, 0, 0], [738, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation279", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[739, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul167", 
+      "inputs": [[733, 0, 0], [740, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t28_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 28, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t28_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[728, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus112", 
+      "inputs": [[742, 0, 0], [743, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t28_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[744, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation283", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[745, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation282", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[745, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul168", 
+      "inputs": [[747, 0, 0], [726, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation280", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[745, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation281", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[745, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul169", 
+      "inputs": [[749, 0, 0], [750, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus113", 
+      "inputs": [[748, 0, 0], [751, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation284", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[752, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul170", 
+      "inputs": [[746, 0, 0], [753, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t28_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[754, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t28_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[741, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus114", 
+      "inputs": [[755, 0, 0], [756, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t28_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[757, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation288", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[758, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation287", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[758, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul171", 
+      "inputs": [[760, 0, 0], [739, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation285", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[758, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation286", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[758, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul172", 
+      "inputs": [[762, 0, 0], [763, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus115", 
+      "inputs": [[761, 0, 0], [764, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation289", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[765, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul173", 
+      "inputs": [[759, 0, 0], [766, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t29_l0_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[1, 29, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t29_l0_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[754, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus116", 
+      "inputs": [[768, 0, 0], [769, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t29_l0_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[770, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation293", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[771, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation292", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[771, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul174", 
+      "inputs": [[773, 0, 0], [752, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation290", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[771, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation291", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[771, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul175", 
+      "inputs": [[775, 0, 0], [776, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus117", 
+      "inputs": [[774, 0, 0], [777, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation294", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[778, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul176", 
+      "inputs": [[772, 0, 0], [779, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t29_l1_i2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[780, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "t29_l1_h2h", 
+      "attr": {"num_hidden": "512"}, 
+      "inputs": [[767, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus118", 
+      "inputs": [[781, 0, 0], [782, 0, 0]]
+    }, 
+    {
+      "op": "SliceChannel", 
+      "name": "t29_l1_slice", 
+      "attr": {"num_outputs": "4"}, 
+      "inputs": [[783, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation298", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[784, 3, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation297", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[784, 2, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul177", 
+      "inputs": [[786, 0, 0], [765, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation295", 
+      "attr": {"act_type": "sigmoid"}, 
+      "inputs": [[784, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation296", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[784, 1, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul178", 
+      "inputs": [[788, 0, 0], [789, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus119", 
+      "inputs": [[787, 0, 0], [790, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation299", 
+      "attr": {"act_type": "tanh"}, 
+      "inputs": [[791, 0, 0]]
+    }, 
+    {
+      "op": "_mul", 
+      "name": "_mul179", 
+      "inputs": [[785, 0, 0], [792, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat0", 
+      "attr": {
+        "dim": "0", 
+        "num_args": "30"
+      }, 
+      "inputs": [
+        [39, 0, 0], 
+        [65, 0, 0], 
+        [91, 0, 0], 
+        [117, 0, 0], 
+        [143, 0, 0], 
+        [169, 0, 0], 
+        [195, 0, 0], 
+        [221, 0, 0], 
+        [247, 0, 0], 
+        [273, 0, 0], 
+        [299, 0, 0], 
+        [325, 0, 0], 
+        [351, 0, 0], 
+        [377, 0, 0], 
+        [403, 0, 0], 
+        [429, 0, 0], 
+        [455, 0, 0], 
+        [481, 0, 0], 
+        [507, 0, 0], 
+        [533, 0, 0], 
+        [559, 0, 0], 
+        [585, 0, 0], 
+        [611, 0, 0], 
+        [637, 0, 0], 
+        [663, 0, 0], 
+        [689, 0, 0], 
+        [715, 0, 0], 
+        [741, 0, 0], 
+        [767, 0, 0], 
+        [793, 0, 0]
+      ]
+    }, 
+    {
+      "op": "null", 
+      "name": "fullyconnected0_weight", 
+      "attr": {"num_hidden": "63"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "fullyconnected0_bias", 
+      "attr": {"num_hidden": "63"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "fullyconnected0", 
+      "attr": {"num_hidden": "63"}, 
+      "inputs": [[794, 0, 0], [795, 0, 0], [796, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "label", 
+      "inputs": []
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape0", 
+      "attr": {"shape": "(-1,)"}, 
+      "inputs": [[798, 0, 0]]
+    }, 
+    {
+      "op": "Cast", 
+      "name": "cast0", 
+      "attr": {"dtype": "int32"}, 
+      "inputs": [[799, 0, 0]]
+    }, 
+    {
+      "op": "WarpCTC", 
+      "name": "warpctc0", 
+      "attr": {
+        "input_length": "30", 
+        "label_length": "4"
+      }, 
+      "inputs": [[797, 0, 0], [800, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [
+    0, 
+    2, 
+    3, 
+    5, 
+    6, 
+    7, 
+    13, 
+    21, 
+    22, 
+    24, 
+    25, 
+    26, 
+    32, 
+    795, 
+    796, 
+    798
+  ], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    31, 
+    32, 
+    33, 
+    34, 
+    35, 
+    36, 
+    37, 
+    38, 
+    39, 
+    43, 
+    44, 
+    45, 
+    46, 
+    47, 
+    48, 
+    49, 
+    50, 
+    51, 
+    52, 
+    53, 
+    54, 
+    55, 
+    56, 
+    57, 
+    58, 
+    59, 
+    60, 
+    61, 
+    65, 
+    66, 
+    67, 
+    68, 
+    69, 
+    70, 
+    71, 
+    72, 
+    73, 
+    74, 
+    75, 
+    76, 
+    77, 
+    78, 
+    82, 
+    83, 
+    84, 
+    85, 
+    86, 
+    87, 
+    88, 
+    89, 
+    90, 
+    91, 
+    92, 
+    93, 
+    94, 
+    98, 
+    99, 
+    100, 
+    101, 
+    102, 
+    103, 
+    104, 
+    105, 
+    106, 
+    107, 
+    108, 
+    109, 
+    110, 
+    114, 
+    115, 
+    116, 
+    117, 
+    118, 
+    119, 
+    120, 
+    121, 
+    122, 
+    123, 
+    124, 
+    125, 
+    126, 
+    130, 
+    131, 
+    132, 
+    133, 
+    134, 
+    135, 
+    136, 
+    137, 
+    138, 
+    139, 
+    140, 
+    141, 
+    142, 
+    146, 
+    147, 
+    148, 
+    149, 
+    150, 
+    151, 
+    152, 
+    153, 
+    154, 
+    155, 
+    156, 
+    157, 
+    158, 
+    162, 
+    163, 
+    164, 
+    165, 
+    166, 
+    167, 
+    168, 
+    169, 
+    170, 
+    171, 
+    172, 
+    173, 
+    174, 
+    178, 
+    179, 
+    180, 
+    181, 
+    182, 
+    183, 
+    184, 
+    185, 
+    186, 
+    187, 
+    188, 
+    189, 
+    190, 
+    194, 
+    195, 
+    196, 
+    197, 
+    198, 
+    199, 
+    200, 
+    201, 
+    202, 
+    203, 
+    204, 
+    205, 
+    206, 
+    210, 
+    211, 
+    212, 
+    213, 
+    214, 
+    215, 
+    216, 
+    217, 
+    218, 
+    219, 
+    220, 
+    221, 
+    222, 
+    226, 
+    227, 
+    228, 
+    229, 
+    230, 
+    231, 
+    232, 
+    233, 
+    234, 
+    235, 
+    236, 
+    237, 
+    238, 
+    242, 
+    243, 
+    244, 
+    245, 
+    246, 
+    247, 
+    248, 
+    249, 
+    250, 
+    251, 
+    252, 
+    253, 
+    254, 
+    258, 
+    259, 
+    260, 
+    261, 
+    262, 
+    263, 
+    264, 
+    265, 
+    266, 
+    267, 
+    268, 
+    269, 
+    270, 
+    274, 
+    275, 
+    276, 
+    277, 
+    278, 
+    279, 
+    280, 
+    281, 
+    282, 
+    283, 
+    284, 
+    285, 
+    286, 
+    290, 
+    291, 
+    292, 
+    293, 
+    294, 
+    295, 
+    296, 
+    297, 
+    298, 
+    299, 
+    300, 
+    301, 
+    302, 
+    306, 
+    307, 
+    308, 
+    309, 
+    310, 
+    311, 
+    312, 
+    313, 
+    314, 
+    315, 
+    316, 
+    317, 
+    318, 
+    322, 
+    323, 
+    324, 
+    325, 
+    326, 
+    327, 
+    328, 
+    329, 
+    330, 
+    331, 
+    332, 
+    333, 
+    334, 
+    338, 
+    339, 
+    340, 
+    341, 
+    342, 
+    343, 
+    344, 
+    345, 
+    346, 
+    347, 
+    348, 
+    349, 
+    350, 
+    354, 
+    355, 
+    356, 
+    357, 
+    358, 
+    359, 
+    360, 
+    361, 
+    362, 
+    363, 
+    364, 
+    365, 
+    366, 
+    370, 
+    371, 
+    372, 
+    373, 
+    374, 
+    375, 
+    376, 
+    377, 
+    378, 
+    379, 
+    380, 
+    381, 
+    382, 
+    386, 
+    387, 
+    388, 
+    389, 
+    390, 
+    391, 
+    392, 
+    393, 
+    394, 
+    395, 
+    396, 
+    397, 
+    398, 
+    402, 
+    403, 
+    404, 
+    405, 
+    406, 
+    407, 
+    408, 
+    409, 
+    410, 
+    411, 
+    412, 
+    413, 
+    414, 
+    418, 
+    419, 
+    420, 
+    421, 
+    422, 
+    423, 
+    424, 
+    425, 
+    426, 
+    427, 
+    428, 
+    429, 
+    430, 
+    434, 
+    435, 
+    436, 
+    437, 
+    438, 
+    439, 
+    440, 
+    441, 
+    442, 
+    443, 
+    444, 
+    445, 
+    446, 
+    450, 
+    451, 
+    452, 
+    453, 
+    454, 
+    455, 
+    456, 
+    457, 
+    458, 
+    459, 
+    460, 
+    461, 
+    462, 
+    466, 
+    467, 
+    468, 
+    469, 
+    470, 
+    471, 
+    472, 
+    473, 
+    474, 
+    475, 
+    476, 
+    477, 
+    478, 
+    482, 
+    483, 
+    484, 
+    485, 
+    486, 
+    487, 
+    488, 
+    489, 
+    490, 
+    491, 
+    492, 
+    493, 
+    494, 
+    498, 
+    499, 
+    500, 
+    501, 
+    502, 
+    503, 
+    504, 
+    505, 
+    506, 
+    507, 
+    508, 
+    509, 
+    510, 
+    514, 
+    515, 
+    516, 
+    517, 
+    518, 
+    519, 
+    520, 
+    521, 
+    522, 
+    523, 
+    524, 
+    525, 
+    526, 
+    530, 
+    531, 
+    532, 
+    533, 
+    534, 
+    535, 
+    536, 
+    537, 
+    538, 
+    539, 
+    540, 
+    541, 
+    542, 
+    546, 
+    547, 
+    548, 
+    549, 
+    550, 
+    551, 
+    552, 
+    553, 
+    554, 
+    555, 
+    556, 
+    557, 
+    558, 
+    562, 
+    563, 
+    564, 
+    565, 
+    566, 
+    567, 
+    568, 
+    569, 
+    570, 
+    571, 
+    572, 
+    573, 
+    574, 
+    578, 
+    579, 
+    580, 
+    581, 
+    582, 
+    583, 
+    584, 
+    585, 
+    586, 
+    587, 
+    588, 
+    589, 
+    590, 
+    594, 
+    595, 
+    596, 
+    597, 
+    598, 
+    599, 
+    600, 
+    601, 
+    602, 
+    603, 
+    604, 
+    605, 
+    606, 
+    610, 
+    611, 
+    612, 
+    613, 
+    614, 
+    615, 
+    616, 
+    617, 
+    618, 
+    619, 
+    620, 
+    621, 
+    622, 
+    626, 
+    627, 
+    628, 
+    629, 
+    630, 
+    631, 
+    632, 
+    633, 
+    634, 
+    635, 
+    636, 
+    637, 
+    638, 
+    642, 
+    643, 
+    644, 
+    645, 
+    646, 
+    647, 
+    648, 
+    649, 
+    650, 
+    651, 
+    652, 
+    653, 
+    654, 
+    658, 
+    659, 
+    660, 
+    661, 
+    662, 
+    663, 
+    664, 
+    665, 
+    666, 
+    667, 
+    668, 
+    669, 
+    670, 
+    674, 
+    675, 
+    676, 
+    677, 
+    678, 
+    679, 
+    680, 
+    681, 
+    682, 
+    683, 
+    684, 
+    685, 
+    686, 
+    690, 
+    691, 
+    692, 
+    693, 
+    694, 
+    695, 
+    696, 
+    697, 
+    698, 
+    699, 
+    700, 
+    701, 
+    702, 
+    706, 
+    707, 
+    708, 
+    709, 
+    710, 
+    711, 
+    712, 
+    713, 
+    714, 
+    715, 
+    716, 
+    717, 
+    718, 
+    722, 
+    723, 
+    724, 
+    725, 
+    726, 
+    727, 
+    728, 
+    729, 
+    730, 
+    731, 
+    732, 
+    733, 
+    734, 
+    738, 
+    739, 
+    740, 
+    741, 
+    742, 
+    743, 
+    744, 
+    745, 
+    746, 
+    747, 
+    748, 
+    749, 
+    750, 
+    754, 
+    755, 
+    756, 
+    757, 
+    758, 
+    759, 
+    760, 
+    761, 
+    762, 
+    763, 
+    764, 
+    765, 
+    766, 
+    770, 
+    771, 
+    772, 
+    773, 
+    774, 
+    775, 
+    776, 
+    777, 
+    778, 
+    779, 
+    780, 
+    781, 
+    782, 
+    786, 
+    787, 
+    788, 
+    789, 
+    790, 
+    791, 
+    792, 
+    793, 
+    794, 
+    795, 
+    796, 
+    797, 
+    798, 
+    802, 
+    803, 
+    804, 
+    805, 
+    806, 
+    807, 
+    808, 
+    809, 
+    810, 
+    811, 
+    812, 
+    813, 
+    814, 
+    818, 
+    819, 
+    820, 
+    821, 
+    822, 
+    823, 
+    824, 
+    825, 
+    826, 
+    827, 
+    828, 
+    829, 
+    830, 
+    834, 
+    835, 
+    836, 
+    837, 
+    838, 
+    839, 
+    840, 
+    841, 
+    842, 
+    843, 
+    844, 
+    845, 
+    846, 
+    850, 
+    851, 
+    852, 
+    853, 
+    854, 
+    855, 
+    856, 
+    857, 
+    858, 
+    859, 
+    860, 
+    861, 
+    862, 
+    866, 
+    867, 
+    868, 
+    869, 
+    870, 
+    871, 
+    872, 
+    873, 
+    874, 
+    875, 
+    876, 
+    877, 
+    878, 
+    882, 
+    883, 
+    884, 
+    885, 
+    886, 
+    887, 
+    888, 
+    889, 
+    890, 
+    891, 
+    892, 
+    893, 
+    894, 
+    898, 
+    899, 
+    900, 
+    901, 
+    902, 
+    903, 
+    904, 
+    905, 
+    906, 
+    907, 
+    908, 
+    909, 
+    910, 
+    914, 
+    915, 
+    916, 
+    917, 
+    918, 
+    919, 
+    920, 
+    921, 
+    922, 
+    923, 
+    924, 
+    925, 
+    926, 
+    930, 
+    931, 
+    932, 
+    933, 
+    934, 
+    935, 
+    936, 
+    937, 
+    938, 
+    939, 
+    940, 
+    941, 
+    942, 
+    946, 
+    947, 
+    948, 
+    949, 
+    950, 
+    951, 
+    952, 
+    953, 
+    954, 
+    955, 
+    956, 
+    957, 
+    958, 
+    962, 
+    963, 
+    964, 
+    965, 
+    966, 
+    967, 
+    968, 
+    969, 
+    970, 
+    971, 
+    972, 
+    973, 
+    974, 
+    978, 
+    979, 
+    980, 
+    981, 
+    982, 
+    983, 
+    984, 
+    985, 
+    986, 
+    987, 
+    988, 
+    989, 
+    990, 
+    994, 
+    995, 
+    996, 
+    997, 
+    998, 
+    999, 
+    1000, 
+    1001, 
+    1002, 
+    1003, 
+    1004, 
+    1005, 
+    1006, 
+    1007, 
+    1008, 
+    1009, 
+    1010, 
+    1011
+  ], 
+  "heads": [[801, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 901]}
+}
