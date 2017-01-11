@@ -26,7 +26,8 @@
   ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/26_VYxG.jpg) 
   ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/38_dyRT.jpg) 
   ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/47_0062.jpg)   
- 4.实际效果   
+     
+4.实际预测效果    
  Predicted number: C888  实际值： C888  
  Predicted number: CKCX  实际值： GKGX  
  Predicted number: dEpw  实际值： dEpw  
