@@ -4,7 +4,7 @@
 import sys
 import os
 
-sys.path.insert(0, "/home/gongxijun/mxnet/python")
+sys.path.insert(0, "/home/gongxijun/Qunar/mxnet/python")
 import numpy as np
 import mxnet as mx
 
