@@ -18,14 +18,14 @@
        generator.py     该代码自动生成验证码(为了节约时间，直接摘自网络，再次鸣谢作者).   
        lstm.py          ctc算法处理数据      
  3.验证码效果：  
-  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/0_1SbM.jpg)
-  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/14_EfQu.jpg)
-  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/4_z9Dt.jpg)
-  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/15_mJbV.jpg)  
-  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/20_e7dW.jpg)
-  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/26_VYxG.jpg)
-  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/38_dyRT.jpg)
-  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/47_0062.jpg)  
+  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/0_1SbM.jpg) 
+  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/14_EfQu.jpg) 
+  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/4_z9Dt.jpg) 
+  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/15_mJbV.jpg)   
+  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/20_e7dW.jpg) 
+  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/26_VYxG.jpg) 
+  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/38_dyRT.jpg) 
+  ![image](https://github.com/gongxijun/ocr_recognition/blob/master/img_data/iamge/47_0062.jpg)   
  4.实际效果   
  Predicted number: C888  实际值： C888  
  Predicted number: CKCX  实际值： GKGX  
