@@ -15,6 +15,7 @@ LSTMModel = namedtuple("LSTMModel", ["rnn_exec", "symbol",
                                      "init_states", "last_states",
                                      "seq_data", "seq_labels", "seq_outputs",
                                      "param_blocks"])
+label_num = 4
 
 
 class LSTM_CTC(object):
@@ -26,15 +27,15 @@ class LSTM_CTC(object):
         i2h = mx.sym.FullyConnected(data=indata,
                                     weight=param.i2h_weight,
                                     bias=param.i2h_bias,
-                                    num_hidden=num_hidden * 4,
+                                    num_hidden=num_hidden * label_num,
                                     name="t%d_l%d_i2h" % (seqidx, layeridx))
         h2h = mx.sym.FullyConnected(data=prev_state.h,
                                     weight=param.h2h_weight,
                                     bias=param.h2h_bias,
-                                    num_hidden=num_hidden * 4,
+                                    num_hidden=num_hidden * label_num,
                                     name="t%d_l%d_h2h" % (seqidx, layeridx))
         gates = i2h + h2h
-        slice_gates = mx.sym.SliceChannel(gates, num_outputs=4,
+        slice_gates = mx.sym.SliceChannel(gates, num_outputs=label_num,
                                           name="t%d_l%d_slice" % (seqidx, layeridx))
         in_gate = mx.sym.Activation(slice_gates[0], act_type="sigmoid")
         in_transform = mx.sym.Activation(slice_gates[1], act_type="tanh")

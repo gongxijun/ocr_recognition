@@ -13,6 +13,15 @@ import cv2, random
 import os
 import argparse
 
+maps = {}
+maps_value = 11
+
+for char in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ':
+    maps[char] = maps_value
+    maps_value += 1
+image_height = 30
+image_width = 100
+
 
 class SimpleBatch(object):
     def __init__(self, data_names, data, label_names, label):
@@ -31,14 +40,6 @@ class SimpleBatch(object):
     @property
     def provide_label(self):
         return [(n, x.shape) for n, x in zip(self.label_names, self.label)]
-
-
-maps = {}
-maps_value = 11
-
-for char in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ':
-    maps[char] = maps_value
-    maps_value += 1
 
 
 def get_label(buf):
@@ -60,7 +61,7 @@ class OCRIter(mx.io.DataIter):
         self.init_states = init_states
         self.path = path
         self.init_state_arrays = [mx.nd.zeros(x[1]) for x in init_states]
-        self.provide_data = [('data', (batch_size, 100 * 30))] + init_states
+        self.provide_data = [('data', (batch_size, image_width * image_height))] + init_states
         self.provide_label = [('label', (self.batch_size, num_label))]
         self.check = check
 
@@ -80,10 +81,10 @@ class OCRIter(mx.io.DataIter):
                 lable_value = dir_list[num].split('.')[0]
                 lable_value = lable_value.split('_')[1]
                 num += 1
-                img = cv2.resize(img, (100, 30))
-                img = img.transpose(1, 0)
-                img = img.reshape((100 * 30))
-                img = np.multiply(img, 1 / 255.0)
+                img = cv2.resize(img, (image_width, image_height))
+                img = img.transpose(1, 0)  # 转置
+                img = img.reshape((image_width * image_height))
+                img = np.multiply(img, 1 / 255.0)  # 化整到0~1之间
 
                 data.append(img)
                 label.append(get_label(lable_value))

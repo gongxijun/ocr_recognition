@@ -15,7 +15,8 @@ import threading
 
 BATCH_SIZE = 100
 SEQ_LENGTH = 30
-
+image_height = 30
+image_width = 100
 num_hidden = 128
 num_lstm_layer = 2
 
@@ -56,15 +57,15 @@ if __name__ == '__main__':
                                num_hidden=num_hidden,
                                num_label=num_label,
                                arg_params=arg_params,
-                               data_size=n_channel * 30 * 100,
+                               data_size=n_channel *image_width*image_height,
                                ctx=contexts[0])
     cnt = 0
     for image_path in os.listdir(root_path):
 
         img = cv2.imread(os.path.join(root_path, image_path), 0)
-        img = cv2.resize(img, (100, 30))
+        img = cv2.resize(img, (image_width, image_height))
         img = img.transpose(1, 0)
-        img = img.reshape((1, 100 * 30))
+        img = img.reshape((1, image_width*image_height))
         img = np.multiply(img, 1 / 255.0)
         prob = model.forward(mx.nd.array(img), new_seq=True)
 
